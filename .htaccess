@@ -1,0 +1,9 @@
+#Impedir que se pueda ver el contenido de un directorio
+Options All -Indexes
+
+#URL Amigables
+#Activar RewriteEngine (Hay que tener activado el mod_rewrite en apache)
+RewriteEngine on
+
+#Se crea una regla para cambiar la URL y quitar el action
+RewriteRule ^(\w+)$ index.php?action=$1
